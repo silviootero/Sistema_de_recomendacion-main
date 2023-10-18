@@ -1,4 +1,5 @@
 import numpy as np
+import secrets
 import pandas as pd
 import streamlit as st
 from SPARQLWrapper import SPARQLWrapper, JSON, DIGEST, POST
@@ -7,11 +8,11 @@ import lzma
 import dill as pickle
 
 
-sparql = SPARQLWrapper("http://query.wikidata.org/sparql")
+sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
 
 sparql.setQuery("""
-prefix wdt: <http://www.wikidata.org/prop/direct/>
-prefix wd: <http://www.wikidata.org/entity/>
+prefix wdt: <https://www.wikidata.org/prop/direct/>
+prefix wd: <https://www.wikidata.org/entity/>
 
 SELECT DISTINCT ?titulo
 WHERE 
@@ -53,16 +54,16 @@ Usuario9=["Usuario9"]
 Usuario10=["Usuario10"]
 n=len(lista_videojuegos)-1
 for i in range(n):
-    Usuario1.append(random.randint(0,10))
-    Usuario2.append(random.randint(0, 10))
-    Usuario3.append(random.randint(0, 10))
-    Usuario4.append(random.randint(0, 10))
-    Usuario5.append(random.randint(0, 10))
-    Usuario6.append(random.randint(0, 10))
-    Usuario7.append(random.randint(0, 10))
-    Usuario8.append(random.randint(0, 10))
-    Usuario9.append(random.randint(0, 10))
-    Usuario10.append(random.randint(0, 10))
+    Usuario1.append(secrets.randbelow(0,10))
+    Usuario2.append(secrets.randbelow(0, 10))
+    Usuario3.append(secrets.randbelow(0, 10))
+    Usuario4.append(secrets.randbelow(0, 10))
+    Usuario5.append(secrets.randbelow(0, 10))
+    Usuario6.append(secrets.randbelow(0, 10))
+    Usuario7.append(secrets.randbelow(0, 10))
+    Usuario8.append(secrets.randbelow(0, 10))
+    Usuario9.append(secrets.randbelow(0, 10))
+    Usuario10.append(secrets.randbelow(0, 10))
 
 
 print(lista_videojuegos)

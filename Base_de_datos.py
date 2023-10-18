@@ -1,4 +1,5 @@
 import numpy as np
+import secrets
 import pandas as pd
 import streamlit as st
 from SPARQLWrapper import SPARQLWrapper, JSON, DIGEST, POST
@@ -7,11 +8,11 @@ import lzma
 import dill as pickle
 
 
-sparql = SPARQLWrapper("http://query.wikidata.org/sparql")
+sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
 
 sparql.setQuery("""
-prefix wdt: <http://www.wikidata.org/prop/direct/>
-prefix wd: <http://www.wikidata.org/entity/>
+prefix wdt: <https://www.wikidata.org/prop/direct/>
+prefix wd: <https://www.wikidata.org/entity/>
 
 SELECT DISTINCT ?titulo
 WHERE 
@@ -39,7 +40,7 @@ import random
 rand_list=[]
 n=10
 for i in range(n):
-    rand_list.append(random.randint(3,9))
+    rand_list.append(secrets.randbelow(3,9))
 print(rand_list)
 
 print(lista_videojuegos)

@@ -40,7 +40,7 @@ import random
 rand_list=[]
 n=10
 for i in range(n):
-    rand_list.append(secrets.randbelow(3,9))
+    rand_list.append(secrets.choice(3,9))
 print(rand_list)
 
 print(lista_videojuegos)

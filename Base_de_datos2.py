@@ -54,16 +54,16 @@ Usuario9=["Usuario9"]
 Usuario10=["Usuario10"]
 n=len(lista_videojuegos)-1
 for i in range(n):
-    Usuario1.append(secrets.randbelow(0,10))
-    Usuario2.append(secrets.randbelow(0, 10))
-    Usuario3.append(secrets.randbelow(0, 10))
-    Usuario4.append(secrets.randbelow(0, 10))
-    Usuario5.append(secrets.randbelow(0, 10))
-    Usuario6.append(secrets.randbelow(0, 10))
-    Usuario7.append(secrets.randbelow(0, 10))
-    Usuario8.append(secrets.randbelow(0, 10))
-    Usuario9.append(secrets.randbelow(0, 10))
-    Usuario10.append(secrets.randbelow(0, 10))
+    Usuario1.append(secrets.choice(0,10))
+    Usuario2.append(secrets.choice(0, 10))
+    Usuario3.append(secrets.choice(0, 10))
+    Usuario4.append(secrets.choice(0, 10))
+    Usuario5.append(secrets.choice(0, 10))
+    Usuario6.append(secrets.choice(0, 10))
+    Usuario7.append(secrets.choice(0, 10))
+    Usuario8.append(secrets.choice(0, 10))
+    Usuario9.append(secrets.choice(0, 10))
+    Usuario10.append(secrets.choice(0, 10))
 
 
 print(lista_videojuegos)
